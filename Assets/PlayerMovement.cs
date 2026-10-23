@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Movement()
     {
-        Vector2 moveInput = moveAction.FindAction("Move").ReadValue<Vector2>();
-        rb.linearVelocityX = moveInput.x * moveSpeed;
+        float moveInput = moveAction.FindAction("Move").ReadValue<float>();
+        rb.linearVelocityX = moveInput * moveSpeed;
     }
 }
